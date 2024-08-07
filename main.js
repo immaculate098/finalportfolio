@@ -234,16 +234,12 @@ document.getElementById('showResumeBtn').addEventListener('click', function() {
 
 //navbar responsiveness
 
-// document.addEventListener("DOMContentLoaded", function() {
-//   var menuToggle = document.querySelector('.menu-toggle');
-//   var navbar = document.querySelector('.navbar');
+document.addEventListener('DOMContentLoaded', function() {
+  const hamburger = document.querySelector('.hamburger-menu');
+  const navbar = document.querySelector('.navbar');
 
-//   if (menuToggle && navbar) {
-//       menuToggle.addEventListener('click', function() {
-//           navbar.classList.toggle('active');
-//       });
-//   } else {
-//       console.error('Menu toggle or navbar element not found');
-//   }
-// });
+  hamburger.addEventListener('click', function() {
+      navbar.classList.toggle('active');
+  });
+});
 
