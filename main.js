@@ -120,17 +120,21 @@ document.getElementById('contactForm').addEventListener('submit', function(event
   const subject = this.subject.value;
   const message = this.message.value;
 
+  // Check if all fields are filled
   if (!email || !phone || !subject || !message) {
       alert("Please fill in all fields.");
       return;
   }
 
-   // Validate phone number to be less than or equal to 14 digits
-   const phoneDigits = phone.replace(/\D/g, ''); // Remove non-digit characters
-   if (phoneDigits.length > 14) {
-       alert("Phone number must be 14 digits or less.");
-       return;
-   }
+  // Validate phone number to be less than or equal to 14 digits
+  const phoneDigits = phone.replace(/\D/g, ''); // Remove non-digit characters
+  if (phoneDigits.length > 14) {
+      alert("Phone number must be 14 digits or less.");
+      return;
+  }
+
+  const submitButton = this.querySelector('button[type="submit"]');
+  submitButton.disabled = true; // Disable submit button to prevent multiple submissions
 
   // Submit the form data to Formspree using Fetch API
   fetch(this.action, {
@@ -142,19 +146,25 @@ document.getElementById('contactForm').addEventListener('submit', function(event
       body: new URLSearchParams(new FormData(this)).toString()
   })
   .then(response => {
+      console.log('Response status:', response.status); // Log response status
       if (response.ok) {
+          // Success message display
           document.getElementById('successMessage').textContent = "Thank you! Your message has been sent.";
           document.getElementById('successMessage').style.display = "block";
           this.reset(); // Reset form fields
       } else {
+          // Error message display
           document.getElementById('successMessage').textContent = "Oops! There was a problem sending your message.";
           document.getElementById('successMessage').style.display = "block";
       }
+      submitButton.disabled = false; // Re-enable submit button after response
   })
   .catch(error => {
+      // Catch and display error
       document.getElementById('successMessage').textContent = "Oops! There was a problem sending your message.";
       document.getElementById('successMessage').style.display = "block";
       console.error('Error:', error);
+      submitButton.disabled = false; // Re-enable submit button after error
   });
 });
 
@@ -234,12 +244,24 @@ document.getElementById('showResumeBtn').addEventListener('click', function() {
 
 //navbar responsiveness
 
+// document.addEventListener('DOMContentLoaded', function() {
+//   const hamburger = document.querySelector('.hamburger-menu');
+//   const navbar = document.querySelector('.navbar');
+
+//   hamburger.addEventListener('click', function() {
+//       navbar.classList.toggle('active');
+//   });
+// });
+
+//to  toggle the navbar on different screens
+
 document.addEventListener('DOMContentLoaded', function() {
   const hamburger = document.querySelector('.hamburger-menu');
   const navbar = document.querySelector('.navbar');
 
   hamburger.addEventListener('click', function() {
-      navbar.classList.toggle('active');
+      navbar.classList.toggle('active'); // Toggle 'active' class on click
   });
 });
+
 

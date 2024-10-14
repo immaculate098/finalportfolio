@@ -78,7 +78,7 @@ header, nav, section, main, div {
 .hamburger-menu {
   display: none;
   cursor: pointer;
-  margin-left: 600px;
+  margin-left: 60px;
 }
 
 .hamburger-menu.active .bar {
@@ -89,7 +89,7 @@ header, nav, section, main, div {
   display: block;
   width: 30px;
   height: 4px;
-  background-color: #333;
+  background-color: white;
   margin: 5px auto;
 }
 
@@ -261,6 +261,25 @@ header, nav, section, main, div {
   transform: translateY(-50%); /* Center it vertically */
   z-index: 10; /* Ensure it appears above other elements */
   overflow: hidden;
+  
+}
+
+/* Tablet Portrait */
+@media (max-width: 768px) {
+  .profile-image {
+    width: 150px; /* Adjust size for tablet view */
+    height: 150px;
+    right: -150px; /* Adjust position for tablet view */
+  }
+}
+
+/* Mobile Landscape and Portrait */
+@media (max-width: 480px) {
+  .profile-image {
+    width: 100px; /* Smaller size for mobile view */
+    height: 100px;
+    right: -100px; /* Adjust position for mobile view */
+  }
 }
 
 .services-section {
@@ -1287,5 +1306,47 @@ h2 {
 html {
   scroll-behavior: smooth;
 }
+
+
+@media (max-width: 768px) {
+  .grid-container {
+      flex-direction: column;
+  }
+  
+  .content-wrapper {
+      min-width: 100%;
+  }
+}
+
+
+/* education section */
+
+
+
+/* Mobile Landscape and Portrait */
+@media (max-width: 480px) {
+  .featured-works {
+      padding: 10px;
+  }
+
+  .text-content {
+      padding: 5px;
+  }
+
+  .button-card {
+      font-size: 14px;
+      padding: 8px 16px;
+  }
+
+  .timeline-item {
+      font-size: 14px;
+  }
+}
+
+
+
+
+
+
 
 
