@@ -213,32 +213,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-//download pdf
-document.getElementById('downloadBtn').addEventListener('click', function() {
-  var element = document.getElementById('resumeContent');
-  var opt = {
-      margin:       1,
-      filename:     'resume.pdf',
-      image:        { type: 'jpeg', quality: 0.98 },
-      html2canvas:  { scale: 2 },
-      jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
-  };
-  html2pdf().set(opt).from(element).save();
-});
 
 
-//embeded show resume 
 
-document.getElementById('showResumeBtn').addEventListener('click', function() {
-  var resumeContent = document.getElementById('resumeContent');
-  if (resumeContent.style.display === 'none' || resumeContent.style.display === '') {
-      resumeContent.style.display = 'block';
-      this.textContent = 'Hide Resume';
-  } else {
-      resumeContent.style.display = 'none';
-      this.textContent = 'Show Resume';
-  }
-});
 
 
 
