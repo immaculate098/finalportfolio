@@ -12,7 +12,43 @@
     <script src="https://unpkg.com/typed.js@2.0.15/dist/typed.umd.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
 
+    <style>
+       
     
+       
+    
+        .Mcontainer {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+    
+        .Mprofile-image {
+          width: 200px;
+          height: 200px;
+          border-radius: 50%;
+          display: block;
+          margin: 0 auto;
+        }
+    
+        .Mdownload-btn {
+          background-color: #e81e63;
+          color: white;
+          border: none;
+          padding: 10px 20px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin-top: 20px;
+          cursor: pointer;
+          border-radius: 5px;
+        }
+    
+        .Mdownload-btn:hover {
+          background-color: #c51a54;
+        }
+      </style>  
 </head>
 <body>
     <div class="floating-dots"></div>
@@ -411,123 +447,53 @@
         </form>
         <div id="successMessage" class="success-message" style="display: none;"></div>
     </div>
-</div>
+</div><br><br>
 
 
 
 <div class="title-wrapper reveal delay-1" id="projects">
     <h2 class="section-title" id="vitae">Curriculum Vitae</h2>
     <div class="underline"></div>
-</div><br><br>
+</div>
 
 
-<div class="resume" id="resumeContent">
-    <div class="sidebar">
-        <img src="images/proffesional1.jpg" alt="Immaculate Nayiga" class="profile-img"><br><br>
-        <h3>Immaculate Nayiga</h3><br>
-        
-     <h2 style="margin-right: 2000px;">Professional Affiliations</h2>
-        
-    <p>
-        GroundBreaker Talents - (2023-2024)
-        - Selected for the prestigious GroundBreaker Talents fully funded residency
-        program
-    </p><br>
-        
-        <!-- <h2 style="margin-right: 2000px;">ABOUT</h2><br>
-        <p>Brooklyn based full-stack software<br> engineer with experience in building<br> web and mobile apps.</p><br> -->
-        
-        <h2 style="margin-right: 2000px;">CONTACT</h2>
-        <div class="contact-item">
-            <i class="fas fa-envelope"></i>
-            <p>nayigaimmaculate<br>098@gmail.com</p>
-        </div>
-        <div class="contact-item">
-            <i class="fab fa-linkedin"></i>
-            <p>Immaculate Nayiga</p>
-        </div>
-        <div class="contact-item">
-            <i class="fas fa-phone"></i>
-            <p>+256-782-859-695</p>
-        </div><br>
-        
-        <h2 style="margin-right: 2000px;">SKILLS</h2><br>
-        <div class="skilled">
-            <span class="skil"><i class="fab fa-js"></i>JavaScript</span>
-            <span class="skil"><i class="fab fa-react"></i>React</span>
-            <span class="skil"><i class="fab fa-python"></i>Python</span>
-            <span class="skil"><i class="fab fa-git"></i>Git</span>
-            <span class="skil"><i class="fas fa-project-diagram"></i>Agile</span>
-            <span class="skil"><i class="fab fa-node"></i>Node.js</span>
-            <span class="skil"><i class="fas fa-database"></i>MongoDB</span>
-        </div><br>
-        
-        <h2 style="margin-right: 2000px;">LANGUAGES</h2><br>
-        <div class="languages">
-            <span class="language"><i class="fas fa-flag-usa"></i> English</span>
-            <span class="language"><i class="fas fa-flag"></i> Luganda</span>
-        </div>
+<div style="display: flex; align-items: center; justify-content: center; height: 100vh; padding: 20px;">
+    <!-- Left Section -->
+    <div style="width: 20%; background-color: cyan; height: 40%; display: flex; align-items: center; justify-content: center; margin-right: 50px;">
+        <img src="images/proffessional2.jpg" alt="Profile Photo" style="border-radius: 8px; width: 80%; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
     </div>
-    
-    <div class="main-content">
-        <h2>INTRO</h2>
-        <p>I'm Immaculate Nayiga, a software engineer . My expertise lies in developing innovative and user-focused products for both web and mobile platforms, emphasizing intuitive design and robust functionality.I am proficient in python,javascript, HTML, CSS, and Bootstrap and well-versed inframeworks like Django,React and Node.js. I quickly learn new technologies and apply innovative solutions to complex problems.I thrive in hybrid work environments and am highly adaptable, with strong communication and collaboration skills.</p><br>
-        
-        <h2>SOFT SKILLS</h2>
-        <ul class="soft-skills">
-            <li>Critical thinking</li>
-            <li>Teamwork</li>
-            <li>Communication</li>
-            <li>Problem-solving</li>
-            <li>Leadership</li>
-            <li>Adaptability</li>
-            <li>Result-oriented</li>
-            <li>Willingness to learn</li>
-        </ul><br>
 
-
-        <h2>EDUCATION</h2>
-        <ul class="soft-skills">
-            <li>Refactory Academy</li>
-            <li>Bishop Cipriano Kihangire ss Bbiina</li>
-            <li>St Denis Sebuggwawo ss ggaba</li>
-            
-        </ul><br>
-
-
-        <h2>REFERENCES</h2>
-        <ul class="soft-skills">
-            <li>Nambuya Sarah(Sarahnambuya440@gmail.com)</li>
-            <p>CEO at Elevated Elegance</p>
-            <p>+256 750 338376</p>
-            <li>Esther Nansubuga(esther@groundbreaker.org)</li>
-            <p>Programs manager at Groundbreaker Talents</p>
-            <p>+256784462913</p>
-            <li>Dorothy Oyella(doyella@refactory.academy)</li>
-            <p>Placements Lead, Refactory Academy Uganda</p>
-            <p>+256772122523</p>
-            
-        </ul><br>
-
-        
-        
-        <!-- <h2>EXPERIENCE</h2>
-        <div class="experience-item">
-            <div class="experience-header">
-                <strong>Interswitch Group (U)</strong>
-                <span class="date">November 2023 – April 2024</span>
-            </div>
-            <div class="role">Internship Application Developer</div>
-            <ul>
-                <li>Developed a user-friendly mobile application using React Native</li>
-                <li>Created and maintained RESTful APIs using C#</li>
-                <li>Refactored existing code for improved reusability and system performance</li>
-            </ul>
-        </div> -->
-        
-        <button class="btn-box" id="downloadBtn">Download Resume</button>
+    <!-- Right Section -->
+    <div style="width: 60%; padding: 20px; background-color: black; border-radius: 8px;  box-shadow: 0 0 5px #0ef, 0 0 25px #0ef;">
+        <p style="font-size: 1rem; color: white; line-height: 1.9; text-align: justify;">
+            As an experienced Software Developer, I focus on building reliable and scalable solutions 
+            across both front-end and back-end frameworks. I bring expertise in developing user-friendly 
+            interfaces and designing efficient server-side systems. Skilled in data optimization and API 
+            integration, I am adept at implementing CI/CD workflows and utilizing containerization for 
+            smooth deployments. My strengths in problem-solving, clear communication, and teamwork 
+            enable me to produce high-quality work and make valuable contributions to any development 
+            team. I am also committed to continuous learning and staying up-to-date with the latest industry 
+            trends.
+        </p>
+        <a href="images/Immaculate Nayiga resume.pdf" download="Immaculate_Nayiga_CV.pdf" style="text-decoration: none;">
+            <button style=" border: none;   font-size: 1rem; cursor: pointer; margin-top: 20px; display: flex; align-items: center;display: inline-block;
+            padding: 12px 28px;
+            background: #0ef;
+            border-radius: 40px;
+            font-size: 16px;
+            color: #081b29;
+            letter-spacing: 1px;
+            text-decoration: none;
+            font-weight: 600;
+            box-shadow: 0 0 5px #0ef,
+                        0 0 25px #0ef;">
+                <span>Download CV</span>
+            </button>
+        </a>
     </div>
 </div>
+
+
 
 <script>
     document.getElementById('downloadBtn').addEventListener('click', function() {
